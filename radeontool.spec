@@ -8,6 +8,7 @@ Patch0:		radeontool-1.5.patch
 URL:		http://www.fdd.com/software/radeon
 License:	BSD
 Group:		System/Configuration/Hardware
+BuildRoot:	%_tmppath/%name-%version-buildroot
 
 %description
 This utility should enable/disable the external display for ATI Radeon video
