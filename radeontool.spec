@@ -1,11 +1,10 @@
 Name:		radeontool
 Version:	1.5
-Release:	%mkrel 7
+Release:	%mkrel 8
 Summary:	Enable/disable ATI Radeon external display/backlight
 Source0:	http://www.fdd.com/software/radeon/radeontool-%{version}.tar.bz2
 Source1:	http://www.fdd.com/software/radeon/lightwatch2.pl
 Patch0:		radeontool-1.5.patch
-BuildRequires:	kernel-headers
 URL:		http://www.fdd.com/software/radeon
 License:	BSD
 Group:		System/Configuration/Hardware
