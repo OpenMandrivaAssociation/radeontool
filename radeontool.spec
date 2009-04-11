@@ -5,6 +5,7 @@ Summary:	Enable/disable ATI Radeon external display/backlight
 Source0:	http://www.fdd.com/software/radeon/radeontool-%{version}.tar.bz2
 Source1:	http://www.fdd.com/software/radeon/lightwatch2.pl
 Patch0:		radeontool-1.5.patch
+Patch1:		radeontool-1.5-fix-str-fmt.patch
 URL:		http://www.fdd.com/software/radeon
 License:	BSD
 Group:		System/Configuration/Hardware
@@ -23,6 +24,7 @@ USE RADEONTOOL AT YOUR OWN RISK
 %prep
 %setup -q
 %patch0 -p1 -b .orig
+%patch1 -p0 -b .str
 cp %{SOURCE1} .
 
 %build
