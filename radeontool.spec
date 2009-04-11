@@ -22,11 +22,11 @@ USE RADEONTOOL AT YOUR OWN RISK
 
 %prep
 %setup -q
-%patch -p1 -b .orig
+%patch0 -p1 -b .orig
 cp %{SOURCE1} .
 
 %build
-%make CFLAGS="$RPM_OPT_FLAGS"
+%make CFLAGS="%{optflags}"
 
 %install
 rm -rf %{buildroot}
