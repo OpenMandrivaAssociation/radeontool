@@ -9,6 +9,7 @@ URL:		http://people.freedesktop.org/~airlied/radeontool/
 License:	BSD
 Group:		System/Configuration/Hardware
 BuildRoot:	%_tmppath/%name-%version-buildroot
+BuildRequires:	libpciaccess-devel
 
 %description
 This utility should enable/disable the external display for ATI Radeon video
