@@ -1,12 +1,11 @@
 Name:		radeontool
-Version:	1.5
-Release:	%mkrel 9
+Version:	1.6.0
+Release:	%mkrel 0
 Summary:	Enable/disable ATI Radeon external display/backlight
-Source0:	http://www.fdd.com/software/radeon/radeontool-%{version}.tar.bz2
+Source0:	http://people.freedesktop.org/~airlied/%{name}/%{name}-%{version}.tar.bz2
 Source1:	http://www.fdd.com/software/radeon/lightwatch2.pl
-Patch0:		radeontool-1.5.patch
-Patch1:		radeontool-1.5-fix-str-fmt.patch
-URL:		http://www.fdd.com/software/radeon
+Patch1:		radeontool-1.6.0-fix-str-fmt.patch
+URL:		http://people.freedesktop.org/~airlied/radeontool/
 License:	BSD
 Group:		System/Configuration/Hardware
 BuildRoot:	%_tmppath/%name-%version-buildroot
@@ -23,24 +22,24 @@ USE RADEONTOOL AT YOUR OWN RISK
 
 %prep
 %setup -q
-%patch0 -p1 -b .orig
-%patch1 -p0 -b .str
+%patch1 -p1 -b .str
 cp %{SOURCE1} .
 
 %build
-%make CFLAGS="%{optflags}"
+%configure2_5x --bindir=%{_sbindir}
+%make
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}%{_sbindir}
-install radeontool %{buildroot}%{_sbindir}
+%makeinstall_std
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,755)
-%doc CHANGES lightwatch.pl lightwatch2.pl
+%doc lightwatch2.pl
 %{_sbindir}/radeontool
+%{_sbindir}/avivotool
 
 
