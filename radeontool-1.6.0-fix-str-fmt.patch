@@ -1,0 +1,24 @@
+diff -ur radeontool-1.6.0.orig/avivotool.c radeontool-1.6.0/avivotool.c
+--- radeontool-1.6.0.orig/avivotool.c	2009-11-20 04:54:44.000000000 +0100
++++ radeontool-1.6.0/avivotool.c	2010-02-08 19:54:37.000000000 +0100
+@@ -64,7 +64,7 @@
+ 
+ static void fatal(char *why)
+ {
+-    fprintf(stderr, why);
++    fprintf(stderr, "%s", why);
+     pci_system_cleanup();
+ 
+ }
+diff -ur radeontool-1.6.0.orig/radeontool.c radeontool-1.6.0/radeontool.c
+--- radeontool-1.6.0.orig/radeontool.c	2009-11-20 05:06:37.000000000 +0100
++++ radeontool-1.6.0/radeontool.c	2010-02-08 19:50:25.000000000 +0100
+@@ -39,7 +39,7 @@
+ static void radeon_rom_legacy_mmio_table(unsigned char *bios, int offset);
+ static void fatal(char *why)
+ {
+-    fprintf(stderr,why);
++    fprintf(stderr,'%s',why);
+     pci_system_cleanup();
+     exit(-1);
+ }
