@@ -1,7 +1,7 @@
 Summary:	Enable/disable ATI Radeon external display/backlight
 Name:		radeontool
 Version:	1.6.3
-Release:	16
+Release:	17
 License:	BSD
 Group:		System/Configuration/Hardware
 Url:		http://people.freedesktop.org/~airlied/radeontool/
