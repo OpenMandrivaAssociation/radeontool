@@ -4,7 +4,7 @@ Version:	1.6.3
 Release:	20
 License:	BSD
 Group:		System/Configuration/Hardware
-Url:		http://people.freedesktop.org/~airlied/radeontool/
+Url:		https://people.freedesktop.org/~airlied/radeontool/
 Source0:	http://people.freedesktop.org/~airlied/%{name}/%{name}-%{version}.tar.bz2
 Source1:	http://www.fdd.com/software/radeon/lightwatch2.pl
 BuildRequires:	pkgconfig(pciaccess)
