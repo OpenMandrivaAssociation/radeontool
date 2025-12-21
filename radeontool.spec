@@ -7,6 +7,11 @@ Group:		System/Configuration/Hardware
 Url:		https://people.freedesktop.org/~airlied/radeontool/
 Source0:	http://people.freedesktop.org/~airlied/%{name}/%{name}-%{version}.tar.bz2
 Source1:	http://www.fdd.com/software/radeon/lightwatch2.pl
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(pciaccess)
 
 %description
